@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="com.liferay.support.standup">
+        <author>Daniel Javorszky</author>
+        <namespace>SUP</namespace>
+
+                <!-- Define the entity for the Manufacturer table -->
+        <entity name="GlobalInformation" local-service="true" remote-service="true" cache-enabled="true">
+
+                <!-- Primary key column -->
+                <column name="globalInformationId" type="long" primary="true" />
+
+                <!-- Foreign key columns -->
+                <column name="companyId" type="long" />
+                <column name="groupId" type="long" />
+                <column name="userId" type="long" />
+
+                <!-- Other columns -->
+                <column name="date" type="Date" />
+                <column name="message" type="String" />
+                <column name="display" type="int" />
+                <column name="status" type="int" />
+                
+                <!-- Sort order -->
+                <order by="asc">
+                        <order-column name="date" />
+                </order>
+
+                <!-- Finder Methods -->
+                <finder name="GroupId" return-type="Collection">
+                        <finder-column name="groupId" />
+                </finder>
+                <finder name="Date" return-type="Collection">
+                        <finder-column name="date" />
+                </finder>
+                <finder name="Display" return-type="Collection">
+                        <finder-column name="display" />
+                </finder>
+        </entity>
+
+        <!-- Define the entity for the Stand Up Entry table -->
+        <entity name="StandUpEntry" local-service="true" table="StandupEntry">
+                <!-- Primary key column -->
+                <column name="entryId" type="long" primary="true" />
+
+                <!-- Foreign key columns -->
+                <column name="companyId" type="long" />
+                <column name="groupId" type="long" />
+                <column name="userId" type="long" />
+
+                <!-- Other columns -->
+                <column name="quantity" type="int" />
+                <column name="difficulty" type="int" />
+                <column name="createDate" type="Date" />
+                <column name="modifiedDate" type="Date" />
+                <column name="blocking" type="String" />
+                <column name="additionalDetails" type="String" />
+                <column name="status" type="int" />
+        </entity>
+</service-builder>
