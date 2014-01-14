@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.liferay.support.standup.service.GlobalInformationLocalService" class="com.liferay.support.standup.service.impl.GlobalInformationLocalServiceImpl" />
+	<bean id="com.liferay.support.standup.service.GlobalInformationService" class="com.liferay.support.standup.service.impl.GlobalInformationServiceImpl" />
+	<bean id="com.liferay.support.standup.service.persistence.GlobalInformationPersistence" class="com.liferay.support.standup.service.persistence.GlobalInformationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.liferay.support.standup.service.StandUpEntryLocalService" class="com.liferay.support.standup.service.impl.StandUpEntryLocalServiceImpl" />
+	<bean id="com.liferay.support.standup.service.StandUpEntryService" class="com.liferay.support.standup.service.impl.StandUpEntryServiceImpl" />
+	<bean id="com.liferay.support.standup.service.persistence.StandUpEntryPersistence" class="com.liferay.support.standup.service.persistence.StandUpEntryPersistenceImpl" parent="basePersistence" />
+</beans>

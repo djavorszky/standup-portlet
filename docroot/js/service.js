@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.SUP", "com.liferay.support.standup.service", "Standup-portlet");

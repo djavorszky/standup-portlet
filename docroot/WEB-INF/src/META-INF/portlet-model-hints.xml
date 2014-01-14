@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.support.standup.model.GlobalInformation">
+		<field name="globalInformationId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="date" type="Date" />
+		<field name="message" type="String" />
+		<field name="display" type="int" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.liferay.support.standup.model.StandUpEntry">
+		<field name="entryId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="quantity" type="int" />
+		<field name="difficulty" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="blocking" type="String" />
+		<field name="additionalDetails" type="String" />
+		<field name="status" type="int" />
+	</model>
+</model-hints>
